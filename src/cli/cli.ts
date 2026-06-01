@@ -1,8 +1,6 @@
-#!/usr/bin/env bun
-// caplabel CLI. Reads a file as TEXT (never imports/executes it) and prints a
-// capability label (human or --json). Exit code gates CI: 0 ok, 1 review, 2 high risk.
+// caplabel CLI core. The file read is injected for testability; the analyzer
+// never executes the target — only tokenizes it as text.
 
-import { readFileSync } from "node:fs";
 import { inspect } from "../analyze/analyze";
 import { renderHuman, verdict } from "../report/report";
 
@@ -28,10 +26,4 @@ export function run(args: string[], read: (f: string) => string): CliResult {
   const v = verdict(result);
   const code = v === "HIGH RISK" ? 2 : v === "REVIEW — unverifiable" ? 1 : 0;
   return { output, code };
-}
-
-if (import.meta.main) {
-  const r = run(process.argv.slice(2), (f) => readFileSync(f, "utf8"));
-  console.log(r.output);
-  process.exit(r.code);
 }

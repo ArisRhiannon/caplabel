@@ -1,16 +1,42 @@
 {
   "name": "caplabel",
-  "version": "0.0.0",
-  "description": "Offline, zero-dependency capability labeler: see what a script can do before you run it.",
+  "version": "0.1.0",
+  "description": "Offline, zero-dependency static capability analyzer for JavaScript — see what a script can do (network, filesystem, exec, secrets) before you run it.",
   "license": "MIT",
   "type": "module",
-  "private": true,
   "bin": {
-    "caplabel": "src/cli/cli.ts"
+    "caplabel": "dist/caplabel.js"
   },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "security",
+    "devsecops",
+    "supply-chain",
+    "static-analysis",
+    "sast",
+    "capability",
+    "malware",
+    "npm",
+    "cli",
+    "offline",
+    "zero-dependency",
+    "least-privilege",
+    "code-security",
+    "javascript",
+    "audit"
+  ],
   "scripts": {
     "test": "bun test",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "build": "bun build src/cli/bin.ts --target node --outfile dist/caplabel.js",
+    "prepublishOnly": "bun run build && bun test"
   },
   "dependencies": {},
   "devDependencies": {

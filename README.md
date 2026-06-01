@@ -25,7 +25,8 @@ A single capability on its own is reported as a capability, **not** an alarm.
 ## Usage
 
 ```sh
-bun src/cli/cli.ts <file> [--json]
+npx caplabel <file> [--json]          # via npm
+bun src/cli/bin.ts <file> [--json]    # from source
 ```
 
 Exit code (for CI gating): `0` ok/low/caution · `1` review (unverifiable) · `2` high risk.
@@ -71,7 +72,7 @@ it only tokenizes it as text. There is no code path from input to execution.
 
 ## Status
 
-Prototype (v1). JS, single-file. Built test-first.
+Prototype — v0.1.0 (on npm: `caplabel`). JS, single-file. Built test-first.
 
 ## License
 
