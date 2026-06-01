@@ -1,0 +1,19 @@
+{
+  "name": "caplabel",
+  "version": "0.0.0",
+  "description": "Offline, zero-dependency capability labeler: see what a script can do before you run it.",
+  "type": "module",
+  "private": true,
+  "bin": {
+    "caplabel": "src/cli/cli.ts"
+  },
+  "scripts": {
+    "test": "bun test",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "typescript": "^5.6.0",
+    "@types/bun": "^1.1.0"
+  }
+}
