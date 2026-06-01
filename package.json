@@ -1,6 +1,6 @@
 {
   "name": "caplabel",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Offline, zero-dependency static capability analyzer for JavaScript — see what a script can do (network, filesystem, exec, secrets) before you run it.",
   "license": "MIT",
   "type": "module",
