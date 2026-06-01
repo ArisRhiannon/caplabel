@@ -72,3 +72,7 @@ it only tokenizes it as text. There is no code path from input to execution.
 ## Status
 
 Prototype (v1). JS, single-file. Built test-first.
+
+## License
+
+MIT — see [LICENSE](LICENSE).

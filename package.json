@@ -2,6 +2,7 @@
   "name": "caplabel",
   "version": "0.0.0",
   "description": "Offline, zero-dependency capability labeler: see what a script can do before you run it.",
+  "license": "MIT",
   "type": "module",
   "private": true,
   "bin": {
