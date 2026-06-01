@@ -1,8 +1,12 @@
 {
   "name": "caplabel",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Offline, zero-dependency static capability analyzer for JavaScript — see what a script can do (network, filesystem, exec, secrets) before you run it.",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ArisRhiannon/caplabel.git"
+  },
   "type": "module",
   "bin": {
     "caplabel": "dist/caplabel.js"
